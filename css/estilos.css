@@ -29,7 +29,7 @@ body {
     padding-bottom: 18px;
     padding-top: 8px;
     margin-bottom: 4px;
-
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .topo h2 {
@@ -74,6 +74,7 @@ body {
     padding-bottom: 13px;
     padding-right: 14px;
     margin-left: 16px;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .card img {
@@ -115,4 +116,8 @@ body {
     Width: 364px;
     Height: 61px;
     border-radius: 50px;
+}
+
+button p {
+    font-size: 20px;
 }
