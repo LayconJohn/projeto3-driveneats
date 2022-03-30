@@ -15,30 +15,40 @@ body {
     box-sizing: border-box;
 }
 
+.tela {
+    height: 100%;
+    position: relative;
+}
+
 /* topo */
 .topo {
     width: 100%;
     height: 92px;
     background-color: #CF2B2B;
-    position: fixed;
-    top: 0px;
-    left: 0px
+
 }
 
-.topo h1 {
+.topo h2 {
     font-size: 44px;
+    color: #FFFFFF;
 }
+
+.topo p {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+
 
 /* Conteúdo */
 .conteudo {
     background-color: #E5E5E5;
     width: 100%;
-
-    height: 842px;
 }
 
 .cards {
     display: flex;
+    overflow-x: scroll;
 }
 
 .card {
@@ -46,6 +56,7 @@ body {
     height: 216px;
     background-color: #FFFFFF;
     border-radius: 9px;
+    margin-left: 16px;
 }
 
 .card img {
@@ -79,9 +90,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
 }
 
 .barra-inferior button {
