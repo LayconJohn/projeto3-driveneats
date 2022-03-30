@@ -18,6 +18,8 @@ body {
     height: 100%;
     position: relative;
     background-color: #E5E5E5;
+    padding-top: 92px;
+    padding-bottom: 92px;
 }
 
 /* topo */
@@ -30,6 +32,9 @@ body {
     padding-top: 8px;
     margin-bottom: 4px;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
 .topo h2 {
@@ -108,6 +113,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
 
 .barra-inferior button {
