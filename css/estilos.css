@@ -54,6 +54,7 @@ body {
 .conteudo {
     background-color: #E5E5E5;
     width: 100%;
+    padding-bottom: 16px;
 }
 
 .conteudo h2 {
@@ -114,7 +115,6 @@ body {
 
 .card ion-icon {
     color: #32B72F;
-    display: none;
 }
 
 /* Barra inferior */
@@ -143,6 +143,6 @@ button p {
 }
 
 /* JS */
-.selecionado {
-    display: initial;    
+.selecionar {
+    display: none;    
 }
