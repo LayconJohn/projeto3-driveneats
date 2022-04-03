@@ -113,8 +113,22 @@ body {
     color: #000000;
 }
 
-.card ion-icon {
+
+.cardSelecionado { 
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    border: 6px solid #32B72F;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.cardSelecionado > ion-icon {
     color: #32B72F;
+    position: absolute;
+    bottom: 16px;
+    right: 12px;
 }
 
 /* Barra inferior */
@@ -143,6 +157,6 @@ button p {
 }
 
 /* JS */
-.selecionar {
+.oculto {
     display: none;    
 }
