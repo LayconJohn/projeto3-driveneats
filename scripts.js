@@ -7,6 +7,16 @@ let legendaBebida;
 let precoBebida;
 let legendaSobremesa;
 let precoSobremesa;
+let precoFinal;
+
+function tratarPreco (preco) {
+    preco = preco.replace("R$", "")
+    return Number(preco)
+}
+
+precoPrato = tratarPreco(precoPrato)
+precoBebida = tratarPreco(precoBebida)
+precoSobremesa = tratarPreco(precoSobremesa)
 
 
 function selecionarPrato (nomePrato) {
@@ -85,6 +95,9 @@ function fazerPedido() {
     pedidoSobremesa.textContent = legendaSobremesa
     let precoPedidoSobremesa = document.querySelector(".preco-sobremesa")
     precoPedidoSobremesa.textContent  = precoSobremesa
+    let precoPedidototal = document.querySelector(".preco-total")
+    precoFinal = tratarPreco(precoPrato) + tratarPreco(precoBebida) + tratarPreco(precoSobremesa)
+    precoPedidototal.textContent = precoFinal.toFixed(2)
 }
 
 function cancelarPedido () {
@@ -94,12 +107,13 @@ function cancelarPedido () {
     pedido.classList.add("oculto")
 }
 
+
 function enviarPedido() {
-    let mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: ${legendaPrato}
-    - Bebida: ${legendaBebida}
-    - Sobremesa: ${legendaSobremesa}
-    Total: R$ ${precoPrato + precoBebida + precoSobremesa}`
+    let mensagem = `Olá, gostaria de fazer o pedido:\
+    - Prato: ${legendaPrato}\
+    - Bebida: ${legendaBebida}\
+    - Sobremesa: ${legendaSobremesa}\
+    Total: R$ ${precoFinal.toFixed(2)}`
     let encoded = encodeURIComponent(mensagem)
     let link = 'https://wa.me/5573988675742?text=' + encoded
     window.open(link)
