@@ -39,3 +39,10 @@ function habilitarBotao(pratoSelecionado, bebidaSelecionada, sobremesaSelecionad
     }
 }
 
+function fazerPedido() {
+    let telaPedido = document.querySelector(".tela-pedido")
+    telaPedido.classList.remove("oculto")
+    let pedido = document.querySelector(".pedido")
+    pedido.classList.remove("oculto")
+}
+

@@ -11,6 +11,28 @@
 <body>
 
     <div class="tela">
+        <div class="tela-pedido oculto"></div>
+        <div class="pedido oculto">
+            <h3 class="titulo-pedido">confirme seu pedido</h3>
+            <div class="pedido-detalhe">
+                <p>Frango Yin Yang</p>
+                <p>14,90</p>
+            </div>
+            <div class="pedido-detalhe">
+                <p>Coca</p>
+                <p>4,90</p>
+            </div>
+            <div class="pedido-detalhe  ">
+                <p>Pudim</p>
+                <p>7,90</p>
+            </div>
+            <div class="pedido-detalhe total">
+                <p>Total</p>
+                <p>R$ 27,70</p>
+            </div>
+            <button>Tudo certo, pode pedir</button>
+            <p>Cancelar</p>
+        </div>
         <div class="topo" onclick="testeClick()">
             <h2 class="fonte-righteous">DrivenEats</h2>
             <p>Sua comida em 6 minutos</p>
@@ -219,7 +241,7 @@
            <div class="barra-inferior">
                <button type="button" class="botao" onclick="habilitarBotao(pratoSelecionado, bebidaSelecionada, sobremesaSelecionada)"><p>Selecione os 3 itens</p>
                 <p> para fechar o pedido</p> </button>
-                <button type="button" class="botao-escondido oculto">
+                <button type="button" class="botao-escondido oculto" onclick="fazerPedido()">
                     <p>fechar o pedido</p> </button>
            </div>
     </div>
