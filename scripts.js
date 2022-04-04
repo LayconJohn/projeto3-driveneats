@@ -93,3 +93,14 @@ function cancelarPedido () {
     let pedido = document.querySelector(".pedido")
     pedido.classList.add("oculto")
 }
+
+function enviarPedido() {
+    let mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${legendaPrato}
+    - Bebida: ${legendaBebida}
+    - Sobremesa: ${legendaSobremesa}
+    Total: R$ ${precoPrato + precoBebida + precoSobremesa}`
+    let encoded = encodeURIComponent(mensagem)
+    let link = 'https://wa.me/5573988675742?text=' + encoded
+    window.open(link)
+}
