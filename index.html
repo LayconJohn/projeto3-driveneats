@@ -11,7 +11,7 @@
 <body>
 
     <div class="tela">
-        <div class="topo">
+        <div class="topo" onclick="testeClick()">
             <h2 class="fonte-righteous">DrivenEats</h2>
             <p>Sua comida em 6 minutos</p>
            </div>
@@ -217,8 +217,10 @@
                </div>
            </div>
            <div class="barra-inferior">
-               <button type="button"><p>Selecione os 3 itens</p>
-                <p>fechar o pedido</p> </button>
+               <button type="button" class="botao" onclick="habilitarBotao(pratoSelecionado, bebidaSelecionada, sobremesaSelecionada)"><p>Selecione os 3 itens</p>
+                <p> para fechar o pedido</p> </button>
+                <button type="button" class="botao-escondido oculto">
+                    <p>fechar o pedido</p> </button>
            </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
