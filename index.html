@@ -11,6 +11,7 @@
 <body>
 
     <div class="tela">
+        <!-- Tela para confirmar pedido -->
         <div class="tela-pedido oculto"></div>
         <div class="pedido oculto">
             <h3 class="titulo-pedido">confirme seu pedido</h3>
@@ -31,213 +32,214 @@
                 <p>R$ 27,70</p>
             </div>
             <button>Tudo certo, pode pedir</button>
-            <p>Cancelar</p>
+            <p onclick="cancelarPedido()">Cancelar</p>
         </div>
-        <div class="topo" onclick="testeClick()">
+        <!-- Topo -->
+        <div class="topo">
             <h2 class="fonte-righteous">DrivenEats</h2>
             <p>Sua comida em 6 minutos</p>
            </div>
-           <div class="conteudo">
-               <div class="pratos">
-                   <div class="titulo-prato">
-                       <h2 class="fonte-righteous">Primeiro, seu prato</h2>
-                   </div>
-                   <div class="cards">
-                    <div class="card yinyang" onclick="selecionarPrato ('yinyang')">
-                        <div class="foto">
-                            <img src="https://s3-alpha-sig.figma.com/img/ae77/de14/bf111f3d6f1c5750a6f9a93e12dc3742?Expires=1649635200&Signature=czzJ-vXCopgLdR1LPydNqUN3zC9BYAm9U4q-vMOADr1AbAdL1U9ji2OLCiOPFoQQKcJs0xBF8XIrbODqzxIz-1bF-fadV92zQBIq~6lMQ329mM6uUU9QYUrE32VBbzJ8Ud1~kYzrqegUF7OoXQARQHpOOclsgdQB8voNfNWd9do3l4N4Zh-2ErgKiljMd~cfItD-V01fACuISST1E-EB3awYTy2BIuaL~xAIHP4P-CB9lCmPU27T7KPV-q55ofNbXFyYAnWc8JgRgrov-NJs06V0uD-1UBjdnqSz4Y78IwvRgMNjwkuowKrbr1BqfUVmTpFvH0md0KFM7jxZ7kT1vw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Frango Yin Yang">
-                        </div>
-                        <div class="legenda">
-                            <span>Frango Yin Yang</span>
-                        </div>
-                        <div class="descricao">
-                            <span>Um pouco de batata, um pouco de salada</span>
-                        </div>
-                        <div class="card-inferior">
-                            <div class="preco">
-                                <span>R$14,90</span>
-                            </div>
-                           
-                        </div>
-                        <div class="cardSelecionado oculto">
-                            <ion-icon name="checkmark-circle" class="comida" ></ion-icon>
-                        </div>
-                    </div>
-
-
-                    <div class="card grelhado" onclick="selecionarPrato ('grelhado')">
-                        <div class="foto">
-                            <img src="https://img.cybercook.com.br/foodiefeed/qt1dtscnmng4uryoiigoh08tbx9ztnmknx7gjswe.jpeg" alt="frango grelhado">
-                        </div>
-                        <div class="legenda">
-                            <span>Frango grelhado</span>
-                        </div>
-                        <div class="descricao">
-                            <span>Um pouco de batata, salada, arroz e feijão</span>
-                        </div>
-                        <div class="card-inferior">
-                            <div class="preco">
-                                <span>R$14,90</span>
-                            </div>
-                        </div>
-                        <div class="cardSelecionado oculto">
-                            <ion-icon name="checkmark-circle" class="comida"></ion-icon>
-                        </div>
-                    </div>
-                    <div class="card carne" onclick="selecionarPrato('carne')">
-                        <div class="foto">
-                            <img src="https://media.metrolatam.com/2019/01/11/11718175high-4d26008bc43f4a867274c6c2e63c480b-1200x800.jpg" alt="carne assada">
-                        </div>
-                        <div class="legenda">
-                            <span>Carne assada</span>
-                        </div>
-                        <div class="descricao">
-                            <span>Um pouco de arroz, feijão, ovos e batata</span>
-                        </div>
-                        <div class="card-inferior">
-                            <div class="preco">
-                                <span>R$14,90</span>
-                            </div>
-                        </div>
-                        <div class="cardSelecionado oculto">
-                            <ion-icon name="checkmark-circle" class="comida" ></ion-icon>
-                        </div>
-                    </div>
-        
-                   </div>
-        
-               </div>
-               <div class="bebidas">
-                <div class="titulo-bebida">
-                    <h2 class="fonte-righteous">Agora, sua bebida</h2>
+        <div class="conteudo">
+            <div class="pratos">
+                <div class="titulo-prato">
+                    <h2 class="fonte-righteous">Primeiro, seu prato</h2>
                 </div>
                 <div class="cards">
-                 <div class="card coca" onclick="selecionarBebida('coca')">
-                     <div class="foto">
-                         <img src="https://s3-alpha-sig.figma.com/img/6759/7a16/9e54b5ddd2dd66116d1a24abd17ae51c?Expires=1649635200&Signature=dDtoF8930dgwj7YskXEyZmg~tUyX3mPbS0od903nyxNJ7Vc878EmF-KuYSXkm6HU0b9opynABTIOTbVMUrsGi2ZWnCcWKDawN~MZjcjS-qT5hh0Z8wLkqaAtgdDWOzj43h9zhx60QuoeyjJvmJsIkdetyuSgJqr2ziJvZ136uAW9W8bVRnYKtbvCn2QHFkmS1WrkVjtqRnidqt8390NxQDlsf49uVws2Oq~0KA06xz1LwyKa-CkWplNvpA8eS72m-xXpQaBBRT8FWKISS8Q90TXKSEwiNXykRAfWqnT9G0fh245Vuo2Fw8cEbl6~sPKAhgHrUeoaNwaq~SIIxGH09g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="coca cola">
-                     </div>
-                     <div class="legenda">
-                         <span>Coca Cola</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Lata 350ml</span>
-                     </div>
-                     <div class="card-inferior">
+                <div class="card yinyang" onclick="selecionarPrato ('yinyang')">
+                    <div class="foto">
+                        <img src="https://s3-alpha-sig.figma.com/img/ae77/de14/bf111f3d6f1c5750a6f9a93e12dc3742?Expires=1649635200&Signature=czzJ-vXCopgLdR1LPydNqUN3zC9BYAm9U4q-vMOADr1AbAdL1U9ji2OLCiOPFoQQKcJs0xBF8XIrbODqzxIz-1bF-fadV92zQBIq~6lMQ329mM6uUU9QYUrE32VBbzJ8Ud1~kYzrqegUF7OoXQARQHpOOclsgdQB8voNfNWd9do3l4N4Zh-2ErgKiljMd~cfItD-V01fACuISST1E-EB3awYTy2BIuaL~xAIHP4P-CB9lCmPU27T7KPV-q55ofNbXFyYAnWc8JgRgrov-NJs06V0uD-1UBjdnqSz4Y78IwvRgMNjwkuowKrbr1BqfUVmTpFvH0md0KFM7jxZ7kT1vw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Frango Yin Yang">
+                    </div>
+                    <div class="legenda">
+                        <span>Frango Yin Yang</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Um pouco de batata, um pouco de salada</span>
+                    </div>
+                    <div class="card-inferior">
                         <div class="preco">
-                            <span>R$4,90</span>
+                            <span>R$14,90</span>
                         </div>
+                        
+                    </div>
                     <div class="cardSelecionado oculto">
-                        <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                        <ion-icon name="checkmark-circle" class="comida" ></ion-icon>
                     </div>
-                    </div>
-                 </div>
-                 <div class="card guarana" onclick="selecionarBebida('guarana')">
-                     <div class="foto">
-                         <img src="https://engarrafadormoderno.com.br/wp-content/uploads/2020/09/Materia-principal-Guarana-Antarctica-apresenta-edicao-limitada-sabor-canela.jpg" alt="guaraná antártica">
-                     </div>
-                     <div class="legenda">
-                         <span>Guaraná antarctica</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Lata 350ml</span>
-                     </div>
-                     <div class="card-inferior">
-                        <div class="preco">
-                            <span>R$3,90</span>
-                        </div>
-                    <div class="cardSelecionado oculto">
-                        <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
-                    </div>
-                    </div>
-                 </div>
-                 <div class="card brahma" onclick="selecionarBebida('brahma')">
-                     <div class="foto">
-                         <img src="https://ginnolarry.com.br/wp-content/uploads/2017/11/cerveja-brahma-lata.jpg" alt="brahma">
-                     </div>
-                     <div class="legenda">
-                         <span>Brahma Chop</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Lata 350ml</span>
-                     </div>
-                     <div class="card-inferior">
-                        <div class="preco">
-                            <span>R$3,50</span>
-                        </div>
-                    <div class="cardSelecionado oculto">
-                        <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
-                    </div>
-                    </div>
-                 </div>
-        
                 </div>
-               </div>
-               <div class="sobremesas">
-                <div class="titulo-sobremesa">
-                    <h2 class="fonte-righteous">Por fim, sua sobremesa</h2>
-                </div>
-                <div class="cards">
-                 <div class="card pudim" onclick="selecionarSobremesa('pudim')">
-                     <div class="foto">
-                         <img src="https://s3-alpha-sig.figma.com/img/69c2/0177/16f95b6cce396fb4800480789f93d260?Expires=1649635200&Signature=BlGv0lvB-mCgzZo2HS~INNZunwBQ7oLwokaA9k-dRJbvleyPELzUDulFWKDhsBexZKuu~n7PpIi3~a70vniqvqVewRESZRdkmjfooOwF-40iJTvFLHMQ5-~BX8DZd0zaH78~QwzN5CKXISv1r6bMcR5dj8Uh3c95VnHBE-LsFrLvMIWV7vdKCFOuXYgggj9XNkFaMpIK-~fIZq9j~ange42WE6LzEwJEC93E-q0tSMLgJw8BbafF1YDZgROJIUYa2pUOHJTvqD~3p6EU-TaO~8uzQvdqfTYX~tnSPqYSSf094b5wgLmUwQULffqN0DqKnpohU4pSWTx4gKDS0zGlfA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="pudim">
-                     </div>
-                     <div class="legenda">
-                         <span>Pudim</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Apenas Pudim</span>
-                     </div>
-                     <div class="card-inferior">
+
+
+                <div class="card grelhado" onclick="selecionarPrato ('grelhado')">
+                    <div class="foto">
+                        <img src="https://img.cybercook.com.br/foodiefeed/qt1dtscnmng4uryoiigoh08tbx9ztnmknx7gjswe.jpeg" alt="frango grelhado">
+                    </div>
+                    <div class="legenda">
+                        <span>Frango grelhado</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Um pouco de batata, salada, arroz e feijão</span>
+                    </div>
+                    <div class="card-inferior">
                         <div class="preco">
-                            <span>R$7,90</span>
+                            <span>R$14,90</span>
+                        </div>
+                    </div>
+                    <div class="cardSelecionado oculto">
+                        <ion-icon name="checkmark-circle" class="comida"></ion-icon>
+                    </div>
+                </div>
+                <div class="card carne" onclick="selecionarPrato('carne')">
+                    <div class="foto">
+                        <img src="https://media.metrolatam.com/2019/01/11/11718175high-4d26008bc43f4a867274c6c2e63c480b-1200x800.jpg" alt="carne assada">
+                    </div>
+                    <div class="legenda">
+                        <span>Carne assada</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Um pouco de arroz, feijão, ovos e batata</span>
+                    </div>
+                    <div class="card-inferior">
+                        <div class="preco">
+                            <span>R$14,90</span>
+                        </div>
+                    </div>
+                    <div class="cardSelecionado oculto">
+                        <ion-icon name="checkmark-circle" class="comida" ></ion-icon>
+                    </div>
+                </div>
+    
+                </div>
+    
+            </div>
+            <div class="bebidas">
+            <div class="titulo-bebida">
+                <h2 class="fonte-righteous">Agora, sua bebida</h2>
+            </div>
+            <div class="cards">
+                <div class="card coca" onclick="selecionarBebida('coca')">
+                    <div class="foto">
+                        <img src="https://s3-alpha-sig.figma.com/img/6759/7a16/9e54b5ddd2dd66116d1a24abd17ae51c?Expires=1649635200&Signature=dDtoF8930dgwj7YskXEyZmg~tUyX3mPbS0od903nyxNJ7Vc878EmF-KuYSXkm6HU0b9opynABTIOTbVMUrsGi2ZWnCcWKDawN~MZjcjS-qT5hh0Z8wLkqaAtgdDWOzj43h9zhx60QuoeyjJvmJsIkdetyuSgJqr2ziJvZ136uAW9W8bVRnYKtbvCn2QHFkmS1WrkVjtqRnidqt8390NxQDlsf49uVws2Oq~0KA06xz1LwyKa-CkWplNvpA8eS72m-xXpQaBBRT8FWKISS8Q90TXKSEwiNXykRAfWqnT9G0fh245Vuo2Fw8cEbl6~sPKAhgHrUeoaNwaq~SIIxGH09g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="coca cola">
+                    </div>
+                    <div class="legenda">
+                        <span>Coca Cola</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Lata 350ml</span>
+                    </div>
+                    <div class="card-inferior">
+                    <div class="preco">
+                        <span>R$4,90</span>
+                    </div>
+                <div class="cardSelecionado oculto">
+                    <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                </div>
+                </div>
+                </div>
+                <div class="card guarana" onclick="selecionarBebida('guarana')">
+                    <div class="foto">
+                        <img src="https://engarrafadormoderno.com.br/wp-content/uploads/2020/09/Materia-principal-Guarana-Antarctica-apresenta-edicao-limitada-sabor-canela.jpg" alt="guaraná antártica">
+                    </div>
+                    <div class="legenda">
+                        <span>Guaraná antarctica</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Lata 350ml</span>
+                    </div>
+                    <div class="card-inferior">
+                    <div class="preco">
+                        <span>R$3,90</span>
+                    </div>
+                <div class="cardSelecionado oculto">
+                    <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                </div>
+                </div>
+                </div>
+                <div class="card brahma" onclick="selecionarBebida('brahma')">
+                    <div class="foto">
+                        <img src="https://ginnolarry.com.br/wp-content/uploads/2017/11/cerveja-brahma-lata.jpg" alt="brahma">
+                    </div>
+                    <div class="legenda">
+                        <span>Brahma Chop</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Lata 350ml</span>
+                    </div>
+                    <div class="card-inferior">
+                    <div class="preco">
+                        <span>R$3,50</span>
+                    </div>
+                <div class="cardSelecionado oculto">
+                    <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                </div>
+                </div>
+                </div>
+    
+            </div>
+            </div>
+            <div class="sobremesas">
+            <div class="titulo-sobremesa">
+                <h2 class="fonte-righteous">Por fim, sua sobremesa</h2>
+            </div>
+            <div class="cards">
+                <div class="card pudim" onclick="selecionarSobremesa('pudim')">
+                    <div class="foto">
+                        <img src="https://s3-alpha-sig.figma.com/img/69c2/0177/16f95b6cce396fb4800480789f93d260?Expires=1649635200&Signature=BlGv0lvB-mCgzZo2HS~INNZunwBQ7oLwokaA9k-dRJbvleyPELzUDulFWKDhsBexZKuu~n7PpIi3~a70vniqvqVewRESZRdkmjfooOwF-40iJTvFLHMQ5-~BX8DZd0zaH78~QwzN5CKXISv1r6bMcR5dj8Uh3c95VnHBE-LsFrLvMIWV7vdKCFOuXYgggj9XNkFaMpIK-~fIZq9j~ange42WE6LzEwJEC93E-q0tSMLgJw8BbafF1YDZgROJIUYa2pUOHJTvqD~3p6EU-TaO~8uzQvdqfTYX~tnSPqYSSf094b5wgLmUwQULffqN0DqKnpohU4pSWTx4gKDS0zGlfA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="pudim">
+                    </div>
+                    <div class="legenda">
+                        <span>Pudim</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Apenas Pudim</span>
+                    </div>
+                    <div class="card-inferior">
+                    <div class="preco">
+                        <span>R$7,90</span>
+                    </div>
+                <div class="cardSelecionado oculto">
+                    <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                </div>
+                </div>
+                </div>
+                <div class="card mousse" onclick="selecionarSobremesa('mousse')">
+                    <div class="foto">
+                        <img src="https://th.bing.com/th/id/OIP.HTEkxmm01Egf5WDPWq4JSAHaFk?pid=ImgDet&rs=1" alt="mousse de maracujá">
+                    </div>
+                    <div class="legenda">
+                        <span>Mousse de Maracujá</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Frutas Naturais</span>
+                    </div>
+                    <div class="card-inferior">
+                    <div class="preco">
+                        <span>R$6,90</span>
+                    </div>
+                <div class="cardSelecionado oculto">
+                    <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
+                </div>
+                </div>
+                </div>
+                <div class="card acai" onclick="selecionarSobremesa('acai')">
+                    <div class="foto">
+                        <img src="https://th.bing.com/th/id/OIP.VFDf5ReCoU9ggMt9tUxoWgHaDP?pid=ImgDet&rs=1" alt="açaí">
+                    </div>
+                    <div class="legenda">
+                        <span>Açaí</span>
+                    </div>
+                    <div class="descricao">
+                        <span>Acompanhado de morango, banana, e kiwi</span>
+                    </div>
+                    <div class="card-inferior">
+                        <div class="preco">
+                            <span>R$9,90</span>
                         </div>
                     <div class="cardSelecionado oculto">
                         <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
                     </div>
                     </div>
-                 </div>
-                 <div class="card mousse" onclick="selecionarSobremesa('mousse')">
-                     <div class="foto">
-                         <img src="https://th.bing.com/th/id/OIP.HTEkxmm01Egf5WDPWq4JSAHaFk?pid=ImgDet&rs=1" alt="mousse de maracujá">
-                     </div>
-                     <div class="legenda">
-                         <span>Mousse de Maracujá</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Frutas Naturais</span>
-                     </div>
-                     <div class="card-inferior">
-                        <div class="preco">
-                            <span>R$6,90</span>
-                        </div>
-                    <div class="cardSelecionado oculto">
-                        <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
-                    </div>
-                    </div>
-                 </div>
-                 <div class="card acai" onclick="selecionarSobremesa('acai')">
-                     <div class="foto">
-                         <img src="https://th.bing.com/th/id/OIP.VFDf5ReCoU9ggMt9tUxoWgHaDP?pid=ImgDet&rs=1" alt="açaí">
-                     </div>
-                     <div class="legenda">
-                         <span>Açaí</span>
-                     </div>
-                     <div class="descricao">
-                         <span>Acompanhado de morango, banana, e kiwi</span>
-                     </div>
-                        <div class="card-inferior">
-                            <div class="preco">
-                                <span>R$9,90</span>
-                            </div>
-                        <div class="cardSelecionado oculto">
-                            <ion-icon name="checkmark-circle" class="bebida" ></ion-icon>
-                        </div>
-                        </div>
-                 </div>
-        
                 </div>
-               </div>
-           </div>
+    
+            </div>
+            </div>
+        </div>
            <div class="barra-inferior">
                <button type="button" class="botao" onclick="habilitarBotao(pratoSelecionado, bebidaSelecionada, sobremesaSelecionada)"><p>Selecione os 3 itens</p>
                 <p> para fechar o pedido</p> </button>

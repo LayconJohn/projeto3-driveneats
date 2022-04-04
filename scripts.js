@@ -35,7 +35,7 @@ function habilitarBotao(pratoSelecionado, bebidaSelecionada, sobremesaSelecionad
         let botaoEscondido = document.querySelector(".botao-escondido")
         botaoEscondido.classList.remove("oculto")
     } else {
-        alert('Olá')
+        alert('Selecione um item de cada lista')
     }
 }
 
@@ -46,3 +46,9 @@ function fazerPedido() {
     pedido.classList.remove("oculto")
 }
 
+function cancelarPedido () {
+    let telaPedido = document.querySelector(".tela-pedido")
+    telaPedido.classList.add("oculto")
+    let pedido = document.querySelector(".pedido")
+    pedido.classList.add("oculto")
+}
